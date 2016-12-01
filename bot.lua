@@ -5,7 +5,7 @@ URL = require('socket.url')
 JSON = require('dkjson')
 HTTPS = require('ssl.https')
 ----config----
-local bot_api_key = " "--توکن بوت را درون " قرار دهید --
+local bot_api_key = "186216863:AAFK3gzLFKk6RRBqgbBD3gjheGax3v0nSFw" --توکن بوت را درون " قرار دهید --
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
 local start = [[
@@ -52,9 +52,9 @@ _TNX TO USE ME :)_
 
 ----utilites----
 
-function is_admin(msg)-- Check if user is admin or not
+function is_admin(msg) -- Check if user is admin or not
   local var = false
-  local admins = {94746365}-- put your id here
+  local admins = {90285047} -- put your id here
   for k,v in pairs(admins) do
     if msg.from.id == v then
       var = true
@@ -251,10 +251,58 @@ function msg_processor(msg)
  local matches = { string.match(msg.text, "/hyper (.*)") }
  local text = ''..matches[1]..''
  sendMessage(msg.chat.id, text, true, false, true)
-
-elseif msg.text:match("^/[sS]tart") or msg.text:match("^/[Hh]elp") then
+		
+elseif msg.text:match("/bold (.*)") then
+ local matches = { string.match(msg.text, "/bold (.*)") }
+ local text = '*'..matches[1]..'*'
+sendMessage(msg.chat.id, text, true, false, true)
+	
+elseif msg.text:match("^/boldch (.*) (.*)") then
+local matches = { string.match(msg.text, "^/boldch (.*) (.*)") }
+local text = '*'..matches[2]..'*'
+local channel = matches[1]
+sendMessage(channel, text, true, false, true)	
+		
+elseif msg.text:match("/italic (.*)") then
+ local matches = { string.match(msg.text, "/italic (.*)") }
+ local text = '_'..matches[1]..'_'
+ sendMessage(msg.chat.id, text, true, false, true)
+	
+elseif msg.text:match("^/italicch (.*) (.*)") then
+local matches = { string.match(msg.text, "^/italicch (.*) (.*)") }
+local text = '_'..matches[2]..'_'
+local channel = matches[1]
+sendMessage(channel, text, true, false, true)
+		
+elseif msg.text:match("/echo (.*)") then
+ local matches = { string.match(msg.text, "/echo (.*)") }
+ local text = ''..matches[1]..''
+ sendMessage(msg.chat.id, text, true, false, true)
+		
+elseif msg.text:match("/code (.*)") then
+ local matches = { string.match(msg.text, "/code (.*)") }
+ local text = ''..matches[1]..''
+ sendMessage(msg.chat.id, text, true, false, true)
+	
+elseif msg.text:match("^/codech (.*) (.*)") then
+local matches = { string.match(msg.text, "^/codech (.*) (.*)") }
+local text = ''..matches[2]..''
+local channel = matches[1]
+sendMessage(channel, text, true, false, true)
+		
+elseif msg.text:match("/id") then
+ local matches = { string.match(msg.text, "/id") }
+ local text = '*'..msg.from.id..'*'
+ sendMessage(msg.chat.id, text, true, false, true)
+		
+elseif msg.text:match("/ping") then
+ local matches = { string.match(msg.text, "/ping") }
+ local text = '*pong!*'
+ sendMessage(msg.chat.id, text, true, false, true)
+		
+elseif msg.text:match("^/[sS]tart") or msg.text:match("^/[hH]elp") then
  sendMessage(msg.chat.id, start, true, false, true)
-  sendMessage(msg.chat.id, [[[ربات خودتونو بسازید :)](http://telegram.me/beatbot_team)]], true, false, true)
+  sendMessage(msg.chat.id, [[[Join our channel](http://telegram.me/moonsteam)]], true, false, true)
 return end
 
 end
