@@ -5,7 +5,7 @@ URL = require('socket.url')
 JSON = require('dkjson')
 HTTPS = require('ssl.https')
 ----config----
-local bot_api_key = "186216863:AAFK3gzLFKk6RRBqgbBD3gjheGax3v0nSFw" --توکن بوت را درون " قرار دهید --
+local bot_api_key = "211865746:AAExVhEZeV3CqJIZuLv7L13F1ptmx4NS87E" --توکن بوت را درون " قرار دهید --
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
 local start = [[
@@ -293,11 +293,6 @@ sendMessage(channel, text, true, false, true)
 elseif msg.text:match("/id") then
  local matches = { string.match(msg.text, "/id") }
  local text = '*'..msg.from.id..'*'
- sendMessage(msg.chat.id, text, true, false, true)
-		
-elseif msg.text:match("/ping") then
- local matches = { string.match(msg.text, "/ping") }
- local text = '*pong!*'
  sendMessage(msg.chat.id, text, true, false, true)
 		
 elseif msg.text:match("^/[sS]tart") or msg.text:match("^/[hH]elp") then
