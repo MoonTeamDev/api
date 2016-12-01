@@ -5,47 +5,47 @@ URL = require('socket.url')
 JSON = require('dkjson')
 HTTPS = require('ssl.https')
 ----config----
-local bot_api_key = "211865746:AAExVhEZeV3CqJIZuLv7L13F1ptmx4NS87E" --توکن بوت را درون " قرار دهید --
+local bot_api_key = "306668074:AAGweU8xq3ZUoK5Cea_i3C2r3lgzYLZK6f8" --توکن بوت را درون " قرار دهید --
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
-local start = [[
-hi :)
+local start = [[*What can i do?*
 
-/hyper [`test`]
-- `test`
+CHAT COMMANDS :
+〰〰〰〰〰〰〰〰
 
-/hyper [*test*]
-- *test*
+*/hyper* `[text](link)`
+_make hyper links_
 
-/hyper [_test_]
-- _test_
+*/bold* `TEXT`
+_write your text with bold font_
 
-/hyper [[text](url)](url)
-- [BeatBot](BeatBot.ir)
+*/italic* `TEXT`
+_write your text with italic font_
 
-*EXAMPLE*
+*/code* `TEXT`
+_write your text with code font_
 
-/hyper [`Hi`]
-[*I'm a api bot* ]
-[_BeatBot Team created me_]
-[[BeatBot Channel](test)][(http://telegram.me/beatbot_team)]
+*/echo* `TEXT`
+_echo your text_
 
-*RESULT*
+*/id*
+_send your_ `ID`
 
-`Hi`
-*I'm a api bot* 
-_BeatBot Team created me_
-[BeatBot Channel](http://telegram.me/beatbot_team)
+CHANNEL COMMANDS :
+〰〰〰〰〰〰〰〰〰〰
 
-*OTHER*
+*/boldch* @username `TEXT`
+_send your text to your channel with bold font_
 
-*sticker to photo*
-`just send a sticker`
+*/italicch* @username `TEXT`
+_send your text to your channel with italic font_
 
-*photo to sticker*
-`just send a photo`
+*/codech* @username `TEXT`
+_send your text to your channel with code font_
 
-_TNX TO USE ME :)_
+〰〰〰〰〰〰〰〰
+
+*More* _options_ `soon` 
 ]] 
 
 -------
