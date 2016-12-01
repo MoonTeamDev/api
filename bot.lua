@@ -287,12 +287,12 @@ elseif msg.text:match("/echo (.*)") then
 		
 elseif msg.text:match("/code (.*)") then
  local matches = { string.match(msg.text, "/code (.*)") }
- local text = ''..matches[1]..''
+ local text = '`'..matches[1]..'`'
  sendMessage(msg.chat.id, text, true, false, true)
 	
 elseif msg.text:match("^/codech (.*) (.*)") then
 local matches = { string.match(msg.text, "^/codech (.*) (.*)") }
-local text = ''..matches[2]..''
+local text = '`'..matches[2]..'`'
 local channel = matches[1]
 sendMessage(channel, text, true, false, true)
 		
