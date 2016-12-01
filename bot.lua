@@ -30,6 +30,12 @@ _echo your text_
 
 */id*
 _send your_ `ID`
+  
+*photo to sticker*
+_just send_ `photo`
+
+*sticker to photo*
+_just send_ `sticker`
 
 CHANNEL COMMANDS :
 〰〰〰〰〰〰〰〰〰〰
