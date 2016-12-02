@@ -303,7 +303,7 @@ elseif msg.text:match("/id") then
 		
 elseif msg.text:match("^/[sS]tart") or msg.text:match("^/[hH]elp") then
  sendMessage(msg.chat.id, start, true, false, true)
-  sendMessage(msg.chat.id, [[[Join our channel](http://telegram.me/moonsteam)]], true, false, true)
+  sendMessage(msg.chat.id, [[[Join our channel](http://telegram.me/beyondteam)]], true, false, true)
 return end
 
 end
